@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+  <title>BigPicture Demo</title>
+</head>
+
+<body>
+  
+  <img data-bp="img/1.jpg" src="img/1.jpg" width="20%" group='001'>
+  <img data-bp="img/2.jpg" src="img/2.jpg" width="20%" group='002'>
+  <img data-bp="img/3.jpg" src="img/3.jpg" width="20%" group='001'>
+  <img data-bp="img/4.jpg" src="img/4.jpg" width="20%" group='002'>
+
+  <script src="js/BigPicture.js"></script>
+
+  <script>
+ 
+    (function () {
+      const imageLinks = document.querySelectorAll('img');
+	  
+	  imageLinks.forEach(img => {
+		img.addEventListener('click', e => {
+			e.preventDefault();
+			let selector = `img[group="${img.getAttribute('group')}"]`;
+			BigPicture({
+				el: e.target,
+				gallery: document.querySelectorAll(selector)
+			});
+		});
+	  });
+	  
+//      for (let i = 0; i < imageLinks.length; i++) {
+//        imageLinks[i].addEventListener('click', function(e) {
+//          e.preventDefault();
+//      	  let group = e.target.getAttribute('group');
+//          let selector = 'img[group="' + group + '"]';
+//          BigPicture({
+//            el: e.target,
+//            gallery: document.querySelectorAll(selector)
+//          });
+//        });
+//      }
+    })();
+  </script>
+
+</body>
+
+</html>
