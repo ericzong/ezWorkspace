@@ -1,0 +1,11 @@
+{
+  "name": "lib",
+  "version": "0.0.1",
+  "description": "Try some Node.js pkg",
+  "main": "index.js",
+  "author": "Eric Zong",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.0.0"
+  }
+}

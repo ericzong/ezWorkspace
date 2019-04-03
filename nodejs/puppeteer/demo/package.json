@@ -1,0 +1,44 @@
+{
+    "name": "demo",
+    "version": "0.0.1",
+    "description": "puppeteer demo",
+    "author": "zonglu",
+    "license": "MIT",
+    "main": "index.js",
+    "dependencies": {
+        "awilix": "4.2.x",
+        "babel-preset-env": "1.7.x",
+        "expect-puppeteer": "4.1.x",
+        "jest": "24.5.x",
+        "jest-cli": "24.5.x",
+        "jest-puppeteer": "4.1.x",
+        "puppeteer": "1.13.x",
+        "rimraf": "2.6.x"
+    },
+    "scripts": {
+        "test": "jest",
+        "build": "rimraf dist && babel framework -d dist -s",
+        "up": "yarn upgrade --latest"
+    },
+    "devDependencies": {
+        "babel-cli": "6.26.x"
+    },
+    "jest": {
+        "preset": "jest-puppeteer",
+        "testEnvironment": "./framework/jest/environment.js",
+        "globalSetup": "./framework/jest/global-setup.js",
+        "globalTeardown": "./framework/jest/global-teardown.js"
+    },
+    "babel": {
+        "presets": [
+            [
+                "env",
+                {
+                    "targets": {
+                        "node": "current"
+                    }
+                }
+            ]
+        ]
+    }
+}

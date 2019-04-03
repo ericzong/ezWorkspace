@@ -1,4 +1,5 @@
-const PuppeteerEnvironment = require('jest-environment-puppeteer')
+const PuppeteerEnvironment = require('jest-environment-puppeteer');
+// import PuppeteerEnvironment from "jest-environment-puppeteer";
 
 class CustomEnvironment extends PuppeteerEnvironment {
   async setup() {
@@ -14,3 +15,4 @@ class CustomEnvironment extends PuppeteerEnvironment {
 }
 
 module.exports = CustomEnvironment
+// export default CustomEnvironment
