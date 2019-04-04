@@ -9,7 +9,7 @@ function trapDefault
 
 function trapStop
 {
-    Trap {"Get Exception"}
+    Trap {"Get Exception: $($PSItem.Exception.Message)"}
     1/$null
     Get-Process "NoSuchProcess" -ErrorAction Stop
     Dir Miss: -ErrorAction Stop
