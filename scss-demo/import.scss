@@ -1,0 +1,10 @@
+@import 'partial';
+
+body {
+	min-width: 1024px;
+}
+
+div {
+	color: blue;
+	@import 'partial';
+}
