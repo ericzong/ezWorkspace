@@ -29,3 +29,12 @@ function doNotMiss($arg=$(throw "请提供参数 arg！"))
 {
     $arg
 }
+
+# 普通的内部参数
+function innerParam0
+{
+    Param($arg1, $arg2)
+
+    $arg1
+    $arg2
+}
