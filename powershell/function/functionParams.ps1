@@ -4,6 +4,15 @@ function paramFunction ($arg1, $arg2)
     $arg2
 }
 
+function paramFunction2
+{
+    [CmdletBinding()]
+    param($arg1, $arg2)
+
+    $arg1
+    $arg2
+}
+
 # $args
 function sum
 {
