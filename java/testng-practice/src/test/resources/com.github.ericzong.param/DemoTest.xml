@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="传参测试套">
+    <parameter name="param" value="suite传入的参数"/>
+    <test name="classes传参测试">
+        <classes>
+            <class name="com.github.ericzong.param.ParamOnTestMethod"/>
+            <parameter name="param" value="classes传入的参数"/>
+        </classes>
+    </test>
+    <test name="test传参测试">
+        <parameter name="param" value="test传入的参数"/>
+        <classes>
+            <class name="com.github.ericzong.param.ParamOnTestMethod"/>
+        </classes>
+    </test>
+    <test name="suite传参测试">
+        <classes>
+            <class name="com.github.ericzong.param.ParamOnTestMethod"></class>
+        </classes>
+    </test>
+</suite>
