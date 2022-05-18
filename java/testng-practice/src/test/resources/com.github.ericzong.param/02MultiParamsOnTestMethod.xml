@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="@Test传参测试-多参">
+    <parameter name="param" value="suite传入的参数"/>
+    <parameter name="param2" value="suite传入的参数2"/>
+    <test name="多参">
+        <classes>
+            <class name="com.github.ericzong.param.MultiParamsOnTestMethod"/>
+        </classes>
+    </test>
+</suite>

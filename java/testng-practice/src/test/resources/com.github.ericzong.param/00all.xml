@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="传参测试套" preserve-order="true">
+    <suite-files>
+        <suite-file path="01SingleParamOnTestMethod.xml"/>
+        <suite-file path="02MultiParamsOnTestMethod.xml"/>
+    </suite-files>
+</suite>

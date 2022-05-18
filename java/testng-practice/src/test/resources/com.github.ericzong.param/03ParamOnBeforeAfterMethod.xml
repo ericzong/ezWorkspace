@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="前后置处理器测试套">
+    <parameter name="param" value="suite传入的参数"/>
+    <test name="前后置处理器">
+        <groups>
+            <run>
+                <include name="前后置处理器"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.github.ericzong.param.ParamOnBeforeAfterMethod"/>
+        </classes>
+    </test>
+</suite>
