@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="构造器传参测试套">
+    <parameter name="param" value="这是构造器传入的参数"/>
+    <test name="构造器传参测试">
+        <classes>
+            <class name="com.github.ericzong.param.ParamOnConstructor"/>
+        </classes>
+    </test>
+</suite>

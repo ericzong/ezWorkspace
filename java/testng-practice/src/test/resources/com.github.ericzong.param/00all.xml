@@ -1,8 +1,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="传参测试套" preserve-order="true">
+<suite name="传参测试套" preserve-order="true" parallel="false" thread-count="1">
     <suite-files>
         <suite-file path="01SingleParamOnTestMethod.xml"/>
         <suite-file path="02MultiParamsOnTestMethod.xml"/>
+        <suite-file path="03ParamOnBeforeAfterMethod.xml"/>
+        <suite-file path="04OptionalParamMethod.xml"/>
+        <suite-file path="05ParamOnFactoryMethod.xml"/>
+        <suite-file path="06ParamOnConstructor.xml"/>
+        <suite-file path="07DataProviderInSameClassTest.xml"/>
+        <suite-file path="08DataProviderInOtherClassTest.xml"/>
     </suite-files>
 </suite>

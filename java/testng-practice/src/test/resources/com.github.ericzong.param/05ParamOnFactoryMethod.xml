@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="方法工厂测试套" parallel="false" thread-count="1">
+    <parameter name="param" value="传入参数"/>
+    <test name="方法工厂">
+        <classes>
+            <class name="com.github.ericzong.param.ParamOnFactoryMethod"/>
+        </classes>
+    </test>
+</suite>

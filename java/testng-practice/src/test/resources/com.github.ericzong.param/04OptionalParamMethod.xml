@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="参数默认值测试套">
+    <test name="参数默认值">
+        <classes>
+            <class name="com.github.ericzong.param.OptionalParamMethod"/>
+        </classes>
+    </test>
+</suite>

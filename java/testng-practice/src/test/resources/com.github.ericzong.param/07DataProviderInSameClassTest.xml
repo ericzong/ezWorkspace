@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="数据提供器（同类中）测试套">
+    <test name="数据提供器（同类中）测试">
+        <classes>
+            <class name="com.github.ericzong.param.DataProviderInSameClassTest"/>
+        </classes>
+    </test>
+</suite>
