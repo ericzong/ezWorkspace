@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class DataProviderInSameClassTest {
 
     @DataProvider(name = "data")
-    public Object[][] createData() {
+    private Object[][] createData() {
         return new Object[][]{
                 {"@DataProvider"},
                 {"位于同类中"}

@@ -3,6 +3,13 @@
 <suite name="@Test传参测试-单参">
     <parameter name="param" value="suite传入的参数"/>
     <parameter name="param2" value="suite传入的参数2"/>
+    <test name="单参：class传参测试">
+        <classes>
+            <class name="com.github.ericzong.param.SingleParamOnTestMethod">
+                <parameter name="param" value="class传入的参数"></parameter>
+            </class>
+        </classes>
+    </test>
     <test name="单参：classes传参测试">
         <classes>
             <class name="com.github.ericzong.param.SingleParamOnTestMethod"/>
