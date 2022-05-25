@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE book [
+	<!ENTITY writer "Eric Zong">
+	<!ENTITY copyright "©">
+	<!ELEMENT book (author)>
+	<!ELEMENT author (#PCDATA)>
+]>
+
+<book>
+	<author>&writer;&copyright;</author>
+</book>
+
