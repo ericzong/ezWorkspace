@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="已登录">
+    <parameter name="user" value="EZ" />
+    <test name="登录测试">
+        <classes>
+            <class name="com.github.ericzong.listener.ListenerTest" />
+        </classes>
+    </test>
+</suite>

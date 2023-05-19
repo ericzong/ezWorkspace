@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="未登录">
+    <test name="游客测试">
+        <classes>
+            <class name="com.github.ericzong.listener.ListenerTest" />
+        </classes>
+    </test>
+</suite>

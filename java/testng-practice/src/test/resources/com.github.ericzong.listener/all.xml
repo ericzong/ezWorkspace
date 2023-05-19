@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="测试套" preserve-order="true" parallel="false" thread-count="1">
+    <suite-files>
+        <suite-file path="part1.xml"/>
+        <suite-file path="part2.xml"/>
+    </suite-files>
+</suite>
