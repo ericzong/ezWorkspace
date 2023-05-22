@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="DataProvider重跑测试套" parallel="methods" thread-count="2">
+    <listeners>
+        <listener class-name="com.github.ericzong.retry.RetryListener" />
+    </listeners>
+    <test verbose="2" name="DataProvider失败重跑测试" preserve-order="true" enabled="true">
+        <classes>
+            <class name="com.github.ericzong.retry.DataProviderRetryTest" />
+        </classes>
+    </test>
+</suite>
