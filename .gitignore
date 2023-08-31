@@ -1,5 +1,5 @@
 node_modules
 *.log
 
-java/*/target
-java/*/.idea
+java/**/target
+.idea
