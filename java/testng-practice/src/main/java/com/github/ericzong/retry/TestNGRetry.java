@@ -20,8 +20,4 @@ public class TestNGRetry implements IRetryAnalyzer {
 
         return false;
     }
-
-    public void resetCount() {
-        retryCount = 0;
-    }
 }
