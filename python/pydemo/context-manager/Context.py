@@ -9,6 +9,8 @@ class Context(object):
         """
         print('enter...')
 
+        return "value"  # 返回值会赋值给 as 子句
+
     def __exit__(self, exc_type, exc_val, exc_tb):
         """
         在 with 语法体执行后执行
@@ -22,5 +24,6 @@ class Context(object):
 
 ctx = Context()
 
-with ctx:
+with ctx as val:
     print('run...')
+    print(val)

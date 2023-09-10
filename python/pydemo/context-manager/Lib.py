@@ -8,9 +8,10 @@ def context():
     :return:
     """
     print("enter...")  # yield 之前，在 __enter__ 中执行
-    yield
+    yield 'VALUE'  # 该值会赋值给 as 子句标识符
     print("exit...")   # yield 之后，在 __exit__ 中执行
 
 
-with context():
+with context() as val:
     print("run...")
+    print(val)
