@@ -1,0 +1,101 @@
+const data = {
+  "insurance.insurance": "Insurance",
+  "insurance.marineAndOthers": "Marine And Others",
+  "insurance.equireNow": "Equire Now",
+  "insurance.home": "Home",
+  "insurance.section1.marine": "MARINE",
+  "insurance.section1.insurance": "INSURANCE",
+  "insurance.home.subTitle": `Access at your fingertips to the insurance market, we offer a wide range of
+    insurance coverage tailored to suit your business's needs and service
+    requirements.`,
+  "insurance.home.section2.title": "We create bespoke solutions",
+  "insurance.home.section4.title": "Talk to our Team",
+  "insurance.home.section4.desc":
+    " Contact our specialist team to learn more about further information.",
+  "insurance.home.section4.contactUs": "Contact Us",
+  "insurance.home.section4.contactUs.desc":
+    "Join us as a Network Partner or Introducer.",
+  "insurance.home.joinNow": "Join Now",
+
+  // 2023/12/12  询价单新增
+  "insurance.newEnquiry": "New Enquiry",
+  "insurance.myEnquiry": "My Enquiry",
+  "insurance.newEnquiry.dutyOfDisclosure": "Duty of Disclosure",
+  "insurance.newEnquiry.enquiryInfo": "Enquiry Info",
+  "insurance.newEnquiry.declarationInfo": "Declaration Info",
+  "insurance.newEnquiry.yourDuty": "Your Duty of Disclosure",
+  "insurance.newEnquiry.yourDutyInfo":
+    'An insurance policy is a contract of "Utmost Good Faith (Uberrimae Fidei)" which requires you to voluntarily disclose to the insurer(s) all material facts (any circumstance/information that would influence the insurer(s) in setting the premium or deciding whether or not to accept the risks proposed) that you know or could reasonably be expected to know.',
+  "insurance.newEnquiry.nonDisclosure": "Non Disclosure",
+  "insurance.newEnquiry.nonDisclosureInfo":
+    "If you fail to comply with your duty of disclosure, the insurer may be entitled to reduce its liability under the contract in respect of a claim or to cancel the contract. If your disclosure is fraudulent, the insurer may have the right to cancel the policy ab initio.",
+  "insurance.newEnquiry.acknowledge": "Acknowledge",
+  "insurance.newEnquiry.insuranceType": "Insurance Type",
+  "insurance.newEnquiry.assured": "Assured",
+  "insurance.newEnquiry.nameOfAssured": "Name of Assured",
+  "insurance.newEnquiry.enter": "Enter",
+  "insurance.newEnquiry.select": "Select",
+  "insurance.newEnquiry.companyRegistrationNo": "Company Registration No.",
+  "insurance.newEnquiry.natureOfBusiness": "Nature of Business",
+  "insurance.newEnquiry.assuredAddress": "Assured Address",
+  "insurance.newEnquiry.capacity": "Capacity",
+  "insurance.newEnquiry.insurancePeriod": "Insurance Period",
+  "insurance.newEnquiry.insurancePeriodInput": "Only positive integer",
+  "insurance.newEnquiry.insurancePeriodMonths": "Months",
+  "insurance.newEnquiry.inceptionDateOfRisk": "Inception Date Of Risk",
+  "insurance.newEnquiry.website": "Website",
+  "insurance.newEnquiry.requirementDetails": "Requirement Details",
+  "insurance.newEnquiry.requirementDetailsPlaceholder":
+    "Please tell us your enquiry / feedback.",
+  "insurance.btn.previous": "Previous",
+  "insurance.btn.nextStep": "Next Step",
+  "insurance.btn.submit": "Submit",
+  "insurance.newEnquiry.coAssured": "Co-Assured",
+  "insurance.newEnquiry.attachment": "Attachment",
+  "insurance.newEnquiry.upload": "Upload",
+  "insurance.newEnquiry.uploadInfo":
+    "More assured information, total file size limit: {0}MB per file.",
+  "insurance.newEnquiry.declaration": "Declaration",
+  "insurance.newEnquiry.declarationInfo1":
+    "I/We declare and warrant that the information and any attachments given by me/us, is in all respects true and accurate and that I/we undertake to advise of any change to a material fact prior to completion of this insurance policy.",
+  "insurance.newEnquiry.declarationInfo2":
+    "My/Our disclosure and warranty does not limit any legal obligation or duty upon me/us, at common law or otherwise, to disclose to you all material facts and circumstances and to act with utmost good faith at all times. I/We agree that this proposal shall be accepted as being the basis of the contract between us and will form part of any Policy issued to me/us.",
+  "insurance.newEnquiry.declarationInfo3":
+    "The signature below is that of an individual who is authorised to sign on behalf of the company in this capacity.",
+  "insurance.newEnquiry.yourName": "Your Name",
+  "insurance.newEnquiry.yourPhoneNumber": "Your Phone Number",
+  "insurance.newEnquiry.yourEmail": "Your Email",
+  "insurance.newEnquiry.fileNumberLimit":
+    "The number of files should not exceed {0}",
+  "insurance.enquirySuccess.title": "Thanks for submitting your request.",
+  "insurance.enquirySuccess.tip": "Our Team will be in touch with you shortly.",
+  "insurance.enquirySuccess.backToInsurance": "Back to Insurance",
+  "insurance.myEnquiry.myEnquiry": "My Enquiry",
+  "insurance.myEnquiry.status": "Status",
+  "insurance.myEnquiry.enquiryNo": "Enquiry No.",
+  "insurance.myEnquiry.createTime": "Create Time",
+  "insurance.myEnquiry.action": "Action",
+  "insurance.myEnquiry.view": "View",
+  "insurance.myEnquiry.months": "months",
+  "insurance.myEnquiry.assuredInfo": "Assured Info",
+  "insurance.myEnquiry.search": "Search",
+  "insurance.myEnquiry.reset": "Reset",
+  "insurance.enquiryDetail.No": "No.",
+  "insurance.enquiryDetail.nameOfCoAssured": "Name of Co-Assured",
+  "insurance.enquiryDetail.coAssuredAdress": "Co-Assured Adress",
+  "insurance.enquiryDetail.contactInfo": "Contact Info",
+  "insurance.enquiryDetail.name": "Name",
+  "insurance.enquiryDetail.phoneNumber": "Phone Number",
+  "insurance.enquiryDetail.email": "Email",
+  "insurance.enquiryDetail.back": "Back",
+  "insurance.enquiryDetail.createAt": "Create at",
+  // 2023/12/23新增
+  "insurance.breadcrumbMenu.home": "Home",
+  "insurance.newEnquiry.inputRequired": "This item is required.",
+  "insurance.newEnquiry.uploadType": "File format not supported.",
+  "insurance.newEnquiry.uploadSizeLimit": "File size is out of limit.",
+  "insurance.newEnquiry.emaiValidText": "The input is not valid E-mail",
+  // 2023/12/25新增
+  "insurance.myEnquiry.noData": "No data",
+};
+export default data;
