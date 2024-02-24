@@ -129,7 +129,34 @@ class Solution5:
         return s[begin: begin + max_len]
 
     def longest_palindrome(self, s: str) -> str:
-        pass
+        """
+        Manacher算法
+        """
+        str_len = len(s)
+        if str_len < 2:
+            return s
+
+        start, end = 0, -1
+        # 为统一奇偶数回文字符串，在首尾及字符间添加特殊字符间隔
+        s = '#' + '#'.join(list(s)) + '#'
+        arm_len = []
+        right = -1
+        j = -1
+        for i in range(len(s)):
+            if right >= i:
+                i_sym = 2 * j - i
+                min_arm_len = min(arm_len[i_sym], right - i)
+                cur_arm_len = Helper.expand(s, i - min_arm_len, i + min_arm_len)
+            else:
+                cur_arm_len = Helper.expand(s, i, i)
+            arm_len.append(cur_arm_len)
+            if i + cur_arm_len > right:
+                j = i
+                right = i + cur_arm_len
+            if 2 * cur_arm_len + 1 > end - start:
+                start = i - cur_arm_len
+                end = i + cur_arm_len
+        return s[start+1:end+1:2]
 
 class Helper:
     @staticmethod
@@ -153,6 +180,13 @@ class Helper:
             left -= 1
             right += 1
         return left + 1, right - 1  # 注意退出条件达成时多执行了一次加减，所以返回时要做一次逆运算
+
+    @staticmethod
+    def expand(s, left, right):
+        while left >= 0 and right < len(s) and s[left] == s[right]:
+            left -= 1
+            right += 1
+        return (right - left - 2) // 2
 
 
 class MyTestCase(unittest.TestCase):
