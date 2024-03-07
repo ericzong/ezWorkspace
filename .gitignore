@@ -1,5 +1,14 @@
-node_modules
+# Common 
 *.log
 
+# Node.js
+node_modules
+
+# Java
 java/**/target
+
+# Python
+__pycache__
+
+# IDE
 .idea
