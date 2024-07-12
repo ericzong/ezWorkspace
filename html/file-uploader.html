@@ -1,0 +1,14 @@
+<!-- (IE 10+, Edge (EdgeHTML), Edge (Chromium), Chrome, Firefox 42+) --> 
+<input type="file" accept=".xls,.xlsx" />
+<!-- (IE 10+, Edge (EdgeHTML), Edge (Chromium), Chrome, Firefox) -->
+<input type="file"
+ accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" /> 
+
+<input type="file" accept="image/*" /> <!-- all image types --> 
+<input type="file" accept="audio/*" /> <!-- all audio types --> 
+<input type="file" accept="video/*" /> <!-- all video types --> 
+
+<!-- Right approach: Use both file extensions and their corresponding MIME-types. -->
+<!-- (IE 10+, Edge (EdgeHTML), Edge (Chromium), Chrome, Firefox) -->
+<input type="file"
+ accept=".xls,.xlsx, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" /> 
