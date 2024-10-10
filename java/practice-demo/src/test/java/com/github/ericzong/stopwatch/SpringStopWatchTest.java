@@ -47,4 +47,7 @@ public class SpringStopWatchTest {
         logger.info(sw.prettyPrint());
         logger.info(String.valueOf(sw.getTotalTimeMillis()));
     }
+
+    private static class LoggerFactory {
+    }
 }
