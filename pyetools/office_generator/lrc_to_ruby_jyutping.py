@@ -18,7 +18,7 @@ class LrcJyutpingGenerator:
 
     def __init__(self):
         self.trans = JyutpingTransliterator()
-        self.pattern = r'([\u4e00-\u9fff]+|[^\u4e00-\u9fff]+)' # 匹配汉字和非汉字字符
+        self.pattern = r'([\u4e00-\u9fff]+|[^\u4e00-\u9fff]+)'  # 匹配汉字和非汉字字符
 
     def __split(self, jyutping: str) -> list[str]:
         return re.findall(self.pattern, jyutping)
@@ -27,7 +27,7 @@ class LrcJyutpingGenerator:
     def __is_chinese(char: str) -> bool:
         return '\u4e00' <= char[0] <= '\u9fff'
 
-    def process_file(self, lrc_path: str):
+    def process_file(self, lrc_path: str, delimiter: str = ' '):
         with open(lrc_path, 'r', encoding='utf-8') as f:
             lines = f.readlines()
 
@@ -49,11 +49,11 @@ class LrcJyutpingGenerator:
                     hk_chinese, jyutping = self.trans.transliterate(fragment)
                     for base, rt in zip(hk_chinese, jyutping.split(' ')):  # 粤拼是用空格分隔的
                         DocxLrcXmlWriter(paragraph).write_lrc(base, rt)
-                        # 添加空格以分隔字符
-                        paragraph.add_run(" ")
+                        # 添加分隔字符
+                        paragraph.add_run(delimiter)
                 else:
-                    run = paragraph.add_run(fragment)
-                    paragraph.add_run(" ")
+                    paragraph.add_run(fragment)
+                    paragraph.add_run(delimiter)
 
         doc.save(lrc_path + '.docx')
 
@@ -120,10 +120,19 @@ class DocxLrcXmlWriter:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
+    if len(sys.argv) >= 2:
         file_path = sys.argv[1]
+        if len(sys.argv) == 3:
+            my_delimiter = sys.argv[2]
+            LrcJyutpingGenerator().process_file(file_path, my_delimiter)
+        else:
+            LrcJyutpingGenerator().process_file(file_path)
     else:
         print("请输入要处理的粤语歌词LRC文件路径：")
         file_path = input()
-
-    LrcJyutpingGenerator().process_file(file_path)
+        print("请输入分割符（可选，直接回车使用默认无分割符）：")
+        my_delimiter = input()
+        if my_delimiter:
+            LrcJyutpingGenerator().process_file(file_path, my_delimiter)
+        else:
+            LrcJyutpingGenerator().process_file(file_path, '')
