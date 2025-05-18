@@ -77,7 +77,7 @@ class JapaneseTransliterator:
 
         :param str1: 第一个输入字符串
         :param str2: 第二个输入字符串
-        :return: 包含三个元素的元组
+        :return: 包含三个元素的元组：(str1剩余, str2剩余, 共同后缀)
         """
         min_len = min(len(str1), len(str2))
         suffix_length = 0
