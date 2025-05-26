@@ -47,7 +47,7 @@ class LrcHiraganaGenerator:
                 else:
                     paragraph.add_run(word.surface.replace('　', ' '))
 
-        self.doc.save(lrc_path + '.ja.docx')
+        self.doc.save(lrc_path + '.jp.docx')
 
 
 class JapaneseTransliterator:
