@@ -1,10 +1,11 @@
 pip
 setuptools
+typing_extensions
 opencc_python_reimplemented==0.1.7
 lxml==5.4.0
 pinyin_jyutping==0.9
 chirptext==0.2a6.post2
-fugashi==1.4.0
+fugashi==1.4.3
 hanzidentifier==1.3.0
 jamdict==0.1a11.post2
 jamdict_data_fix==1.5.1a2
@@ -12,7 +13,6 @@ jieba==0.42.1
 puchikarui==0.2a2.post5
 python_docx==1.1.2
 python_romkan_ng==0.3.0
-typing_extensions==4.13.2
 unidic_lite==1.0.8
 zhconv==1.4.3
 zhon==2.1.1
