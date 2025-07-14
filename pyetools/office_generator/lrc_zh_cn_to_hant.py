@@ -1,11 +1,8 @@
+import os
 import re
 import sys
 
 import pinyin_jyutping
-from docx import Document
-from docx.oxml import parse_xml
-from docx.oxml.ns import nsdecls
-from docx.shared import Pt
 from opencc import OpenCC
 
 
@@ -30,18 +27,20 @@ class ZhHantGenerator:
               open(lrc_path + '.zh-hant', 'w', encoding='utf-8') as dst):
             lines = src.readlines()
 
-        for line in lines:
-            # 移除行尾换行符
-            line = line.rstrip('\n')
-            fragments = self.__split(line)
+            for line in lines:
+                # 移除行尾换行符
+                # line = line.rstrip('\n')
+                fragments = self.__split(line)
 
-            for fragment in fragments:
-                if self.__is_chinese(fragment):
-                    hk_chinese, jyutping = self.trans.transliterate(fragment)
-                    for base, rt in zip(hk_chinese, jyutping.split(' ')):  # 粤拼是用空格分隔的
-                        dst.write(base)
-                else:
-                    dst.write(fragment)
+                for fragment in fragments:
+                    if self.__is_chinese(fragment):
+                        hk_chinese, jyutping = self.trans.transliterate(fragment)
+                        for base, rt in zip(hk_chinese, jyutping.split(' ')):  # 粤拼是用空格分隔的
+                            dst.write(base)
+                    else:
+                        dst.write(fragment)
+
+                # dst.write(os.linesep)
 
 
 class ZhHantTransliterator:
