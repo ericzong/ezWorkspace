@@ -4,3 +4,4 @@ pytz~=2024.2
 jsonpath-ng~=1.6.1
 pypinyin~=0.53.0
 qrcode>=7.4.2
+pyttsx3
